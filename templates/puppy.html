@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Susanna's Blog - Puppy Pals</title>
+    <script>
+        var shihtzu = new Audio();
+        shihtzu.src = "{{ url_for('static', filename='shih-tzu.mp3') }}";
+        var daschund = new Audio();
+        daschund.src = "{{ url_for('static', filename='daschund.mp3') }}";
+        var wolf = new Audio();
+        wolf.src = "{{ url_for('static', filename='wolf.mp3') }}";
+    </script>
+</head>
+<body style="background-color: #9cb4ec;">
+    <h1 style="text-align: center;">Puppy Pals</h1>
+    <h3 style="text-align: center;">Click us!</h3>
+
+    <img src="{{ url_for('static', filename='shih-tzu.jpg') }}" onmousedown="shihtzu.play()">
+    <img src="{{ url_for('static', filename='daschund.jpg') }}" onmousedown="daschund.play()">
+    <img src="{{ url_for('static', filename='wolf.jpg') }}" onmousedown="wolf.play()">
+</body>
+</html>
